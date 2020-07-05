@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/user_center?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 159753
+  application:
+    name: usercenter-core-service
+  redis:
+    cluster:
+      nodes: 127.0.0.1:6379
+      maxTotal: 200
+      maxIdle: 8
+      minIdle: 2
+    timeout: 5s
+dubbo:
+  registry:
+    address: 127.0.0.1:2181
+    protocol: zookeeper
+    check: false
+    timeout: 10000
+  protocol:
+    name: dubbo
+    port: 30004
+server:
+  port: 8080
+user-center:
+  common:
+    redis-prefix: ucenter_
+
+
+

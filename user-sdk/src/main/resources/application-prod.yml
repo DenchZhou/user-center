@@ -1,0 +1,17 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: usercenter-sdk
+  aop:
+    auto: true
+    proxy-target-class: true
+dubbo:
+  registry:
+    address: 192.168.174.128:2181
+    protocol: zookeeper
+    check: false
+    timeout: 100000
+user-sdk:
+  common:
+     region: 中国

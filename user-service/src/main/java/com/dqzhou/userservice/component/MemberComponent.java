@@ -1,7 +1,7 @@
 package com.dqzhou.userservice.component;
 
 import com.dqzhou.userservice.entity.Member;
-import com.dqzhou.userservice.entity.UserInfo;
+import com.userservice.facade.dto.UserInfoDto;
 
 public interface MemberComponent {
 
@@ -9,5 +9,5 @@ public interface MemberComponent {
 
     void checkPassword(String username, String password);
 
-    UserInfo getMemberByUid(int uid);
+    UserInfoDto getMemberByUid(int uid);
 }
